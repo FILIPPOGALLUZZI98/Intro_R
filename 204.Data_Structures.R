@@ -1,7 +1,13 @@
 # Un vettore è una lista di oggetti che sono dello stesso tipo
 a<-c(1,2,3)
+b<-c("può", "contenere", "solo", "stringhe")
 # Per fare sequenced vectors allora usiamo 'seq()'
 a<-seq(from=n, to=k, by=x)
+
+# Gli array possono avere più di una dimensione ma possono contenere solo un tipo di dato
+a<-array(c(1,2,3))  ## A partire da un vettore 'c(1,2,3)'
+a<-array(b,dim=c(2,3,4))  ## Dove 'b' è un vettore, c(2,3,4) indica le dimensioni
+# Ovviamente dim(b) deve essere uguale a 2x3x4
 
 # Una lista è una collezione di dati ordinati e modificabili
 # Una lista può contenere diversi tipi di dati al suo interno
@@ -14,19 +20,15 @@ a<-matrix(c("a","b","c","d","e","f"), nrow=n, ncol=m)
 # Oppure a partire da una lista/vettore/array
 A<-matrix(a, nrow=n, ncol=m)
 
-# Rispetto alle matrici gli arrays possono avere più di una dimensione
-# Gli array possono contenere solo un tipo di dato
-a<-array(c(1,2,3))  ## A partire da un vettore 'c(1,2,3)'
-a<-array(b,dim=c(2,3,4))  ## Dove 'b' è un vettore, c(2,3,4) indica le dimensioni
-
 #####################################################################################
 #####################################################################################
-# VETTORI, LISTE, ARRAYS
+# OPERAZIONI SU VETTORI, LISTE, ARRAYS
 # Per conoscere la lunghezza usiamo 'lenght()'
 # Per ordinare in ordine alfabetico o numerico gli item usiamo 'sort()'
 # Per sapere se un certo elemento appartiene al datatype usiamo '%in%'
 3 %in% a
 # Per accedere agli elementi usiamo a[n] con n posizione
+# Nel caso di un array multidimensionale a[n,m,k,...]
 # Per accedere a più elementi
 a[c(1,3)]  ## In questo caso il primo e il terzo elemento
 # Per accedere a tutti gli elementi tranne uno selezionato usiamo i negativi
@@ -39,8 +41,7 @@ append(a, valore, after=n)  ## Questo lo aggiunge dopo la posizione 'n'
 # Per rimuovere un elemento usiamo i numeri negativi
 a<-a[-n]
 
-
-# MATRICI
+# OPERAZIONI SU MATRICI
 a[n,m]  ## Per selezionare un elemento (riga, colonna)
 a[n,]  ## Per selezionare una riga
 a[,m]  ## Per selezionare una colonna
@@ -51,6 +52,28 @@ a[,c(1,2,...,m)]  ## Per selezionare da 1 a m colonn
 a<-a[-c(n),]
 a<-a[,-c(m)]
 
+#######################################################################################################
+#######################################################################################################
+# Per ottenere informazioni su un dataset
+?nome_dataset
+dir()  ## Allows us to view all the files available in the directory
+data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pacchetti richiamati
+summary(A) # Informazioni sul dataset
+data(A)  ## Ci fa vedere il contenuto del dataset "A"
+head(A)  ## Ci fa vedere la prima parte del dataset
+tail(A)  ## Ci fa vedere l'ultima parte del dataset
+im.list()  ## This function produces a character vector of the names of files stored in the imageRy package
+
+#######################################################################################################
+#######################################################################################################
+# Se all’interno di un dataset (vettore, array, lista, matrice) sono presenti variabili possiamo richiamarle 
+a<-nome_dataset$nome_variabile
+a<-nome_dataset[[1]]  ## tra partentesi è indicata la posizone della variabile 
+
+# Se dentro il dataset la variabile può assumere valori diversi ed io voglio selezionarne soltanto uno
+# Supponiamo che il dataset 'A' contenga le variabili 'a' e 'b', 
+# e che la varaiabile 'a' possa avere valori 0 e 1
+B<-A[A$a==1] # in questo modo assegno a 'B' solamente i valori 1 della variabile 'a' nel pacchetto 'A'
 
 #######################################################################################################
 #######################################################################################################
@@ -62,25 +85,14 @@ setwd("C:Percorso cartella")
 
 #######################################################################################################
 #######################################################################################################
-# Se all’interno di un dataset sono presenti variabili possiamo richiamarle usando il simbolo del dollaro
-a<-nome_dataset$nome_variabile
-#oppure
-a<-nome_dataset[[1]]
-# tra partentesi è indicata la posizone della variabile all'interno del dataset
-
-# Se dentro il dataset la variabile può assumere valori diversi ed io
-# voglio selezionarne soltanto uno
-# Supponiamo che il dataset 'A' contenga le variabili 'a' e 'b', 
-# e che la varaiabile 'a' possa avere valori 0 e 1
-B<-A[A$a==1] # in questo modo assegno a 'B' solamente i valori 1 della variabile 'a' nel pacchetto 'A'
-
-#######################################################################################################
-#######################################################################################################
 # Se voglio trovare i nomi dei file all'interno di una cartella (o un pacchetto, per esempio 'sdm')
 library(sdm)
 nome_file<-system.file("external/nome.shp",package="dsm")
 # Poi, per passare dal nome del file ad un vettore
 a<-vect(nome_file) # la funzione è nel pacchetto 'terra'
+
+
+
 
 
 
