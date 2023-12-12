@@ -4,6 +4,9 @@
 # variable will be local, and can only be used inside the function. The global variable 
 # with the same name will remain as it was, global and with the original value.
 
+# Per ottenere informazioni su una funzione
+?function_name()
+
 # To create a function, use the 'function()' keyword
 f <- function(){
   'argument'}
