@@ -6,20 +6,6 @@ setwd("C:Percorso cartella")
 
 #######################################################################################################
 #######################################################################################################
-# Per ottenere informazioni su un pacchetto, un dataset o una funzione
-?function_name()
-?nome_dataset
-data(package = .packages(all.available = TRUE)) # Per vedere i contenuti di tutti i pacchetti installati
-dir() # Allows us to view all the files available in the directory
-data() # VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pacchetti richiamati
-summary(A) # Informazioni sul dataset
-data(A) #ci fa vedere il contenuto del dataset "A"
-head(A) #ci fa vedere la prima parte del dataset
-tail(A) # ci fa vedere l'ultima parte del dataset
-im.list() # This function produces a character vector of the names of files stored in the imageRy package directory.
-
-#######################################################################################################
-#######################################################################################################
 # Se all’interno di un dataset sono presenti variabili possiamo richiamarle usando il simbolo del dollaro
 a<-nome_dataset$nome_variabile
 #oppure
