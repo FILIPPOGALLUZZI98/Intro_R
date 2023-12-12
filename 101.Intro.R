@@ -16,6 +16,9 @@ paste("My name is ",a)
 a,b,c<-2
 a<-b<-c<-2
 
+# ';' consente di fare due operazioni nella stessa riga
+a<-1; b<-1
+
 # We can use the 'class()' function to check the data type of a variable
 # Basic data types in R can be divided into the following types:
 # numeric
