@@ -19,6 +19,8 @@ a<-b<-c<-2
 # ';' consente di fare due operazioni nella stessa riga
 a<-1; b<-1
 
+###########################################################################################
+###########################################################################################
 # We can use the 'class()' function to check the data type of a variable
 # Basic data types in R can be divided into the following types:
 # numeric
@@ -37,6 +39,8 @@ as.complex()
 # The 'ceiling()' function rounds a number upwards to its nearest integer, and the 'floor()' function
 # rounds a number downwards to its nearest integer, and returns the result
 
+###########################################################################################
+###########################################################################################
 # Strings are used for storing text
 # You can assign a multiline string to a variable
 a<-"My name
@@ -56,6 +60,8 @@ a <- "We are the so-called \"Vikings\", from the north."
 # Note that auto-printing the str variable will print the backslash in the output. You can use the
 # 'cat()' function to print it without backslash
 
+###########################################################################################
+###########################################################################################
 # R divides the operators in the following groups: Arithmetic operators, Assignment operators, 
 # Comparison operators, Logical operators, Miscellaneous operators.
 # Arithmetic operators are used with numeric values to perform common mathematical operations
