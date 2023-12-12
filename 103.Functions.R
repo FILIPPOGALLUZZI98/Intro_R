@@ -1,4 +1,4 @@
-# Una fuunzione è un blocco di codice che esegue quando viene richiamato.
+# Una fuNzione è un blocco di codice che esegue quando viene richiamato.
 # Posso usare dentro una funzione anche una variabile globale, cioè che è stata definita
 # fuori dalla funzione. If you create a variable with the same name inside a function, this
 # variable will be local, and can only be used inside the function. The global variable 
