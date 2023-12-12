@@ -1,3 +1,4 @@
+# R è case sensitive
 # A variable name must start with a letter and can be a combination of letters, digits, period(.) 
 # and underscore(_). If it starts with period(.), it cannot be followed by a digit. A variable name 
 # cannot start with a number or underscore (_). Variable names are case-sensitive. Reserved words 
