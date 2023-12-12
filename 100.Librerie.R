@@ -5,6 +5,11 @@ install.packages("nomepacchetto")
 # Se un pacchetto è già installato allora dobbiamo richiamarlo ogni volta che vogliamo usarlo
 library(nomepacchetto)
 
+# Per ottenere informazioni su un pacchetto
+?nome_pacchetto
+data(package = .packages(all.available = TRUE))  ## Per vedere i contenuti di tutti i pacchetti installati
+data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pacchetti richiamati
+
 #######################################################################################################
 #######################################################################################################
 bei  ## 
