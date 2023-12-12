@@ -4,7 +4,8 @@
 # To create a function, use the 'function()' keyword
 f <- function(){
   'argument'}
-# To call a function, use the function name followed by parenthesis, like f()
+# To call a function, use the function name followed by parenthesis
+f()
 
 # Information can be passed into functions as arguments.
 # Arguments are specified after the function name, inside the parentheses. You can add
@@ -14,6 +15,12 @@ f <- function(){
 # variable listed inside the parentheses in the function definition. An argument is the value 
 # that is sent to the function when it is called.
 
+f<-function(x,y){
+  return(f(x,y,a))}
+# Dove al posto di f(x,y,a) scrivo la forma della funzione (con 'a' come parametro)
 
+# Posso anche usare la funzione senza variabili in modo che faccia qualcosa quando la richiamo
+f<-function(){
+  print("a")}
 
 
