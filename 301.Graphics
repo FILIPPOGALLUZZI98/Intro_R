@@ -1,1 +1,57 @@
+# GRAFICI A DISPERSIONE
 
+# Supponiamo che 'a' e 'b' siano due vettori contenenti le coordinate x ed y di una certa variabile
+plot(a,b)
+# Se invece è un dataset che contiene al suo interno già le coordinate
+plot(a)
+
+# Esistono 25 tipi diversi di simboli per i grafici a dispersione, per cambiarli dobbiamo mettere come argomento del plot
+plot(a,pch=3)
+# Per cambiare la dimensione dei punti del grafico a dispersione
+plot(a,cex=0.5)
+# Se vogliamo cambiare titolo agli assi
+plot(a,xlab="titolo asse x",ylab="titolo asse y") 
+# Per cambiare colore dei punti del grafico a dispersione
+plot(a, col=”blue”)
+
+############################################################################
+# MAPPE DI DENSITA
+
+# Se abbiamo un dataset con vari punti nello spazio e vogliamo passare ad una mappa di densità
+density_map<-density(dataset)
+# A questo punto non stiamo più lavorando con punti (o vettori) ma stiamo usando i pixel (raster)
+# Se vogliamo sovrapporre la mappa dei punti a quella di densità (o qualsiasi altro plot)
+points(dataset)
+
+# Se vogliamo cambiare i colori della mappa di densità
+cl<-colorRampPalette(c(“black”,”red”,”orange”,”yellow”))(100) 
+# Devo usare le virgolette altrimenti i colori non vengono riconosciuti; 
+# ho bisogno di un array dove mettere quali colori voglio utilizzare; 
+# (100) serve per ottenere un gradiente tra un colore all’altro, se fosse (4) non avrei un gradiente,
+# ma semplicemente un salto netto tra un colore e l’altro; 
+# assegno tutto a un oggetto cl in modo da poterlo richiamare all’interno della funzione plot():
+plot(density_map,col=cl)
+
+############################################################################# 
+# Mostrare due grafici nella stessa immagine
+par(mfrow=c(1,2)) 
+# Dove il primo sta per le righe e il secondo per le colonne. 
+plot(grafico1) 
+plot(grafico2) 
+# Con questo ottengo due grafici uno accanto all’altro.
+
+# Se voglio chiudere i grafici
+dev.off()
+
+# ???
+pairs(a)
+
+# Per plottare soltanto una parte dell'immagine
+# ext<-c(m_lon,M_lon,m_lat,M_lat)
+# crop(nome,ext)
+#############################################################################
+# imageRy
+
+im.list() # This function produces a character vector of the names of files stored in the 'imageRy' package directory.
+im.import() # This function imports a chosen image stored in the 'imageRy' package.
+# im.plotRGB -->This function plots a RGB image from a SpatRaster object
