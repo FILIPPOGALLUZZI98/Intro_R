@@ -13,16 +13,6 @@ f <- function(){
 # information that are passed into a function. From a function's perspective: A parameter is the 
 # variable listed inside the parentheses in the function definition. An argument is the value 
 # that is sent to the function when it is called.
-f<-function(x,y){
-  f(x,y,a)}
-# dove 'x', 'y' ed 'a' sono variabili/parametri e al posto di 'f(x,y,a)' va scritta la funzione che voglio
-f<-function(x,y){
-  x*y-3}
-f(2,3)
-# Ottengo come output 3
-
-
-
 
 
 
