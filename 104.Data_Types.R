@@ -1,9 +1,13 @@
 # Un vettore è una lista di oggetti che sono dello stesso tipo
 a<-c(1,2,3)
+# Per fare sequenced vectors allora usiamo 'seq()'
+a<-seq(from=n, to=k, by=x)
 
 # Una lista è una collezione di dati ordinati e modificabili
 # Una lista può contenere diversi tipi di dati al suo interno
 a<-list("a",1,"abc",10)
+# Per unire due liste usiamo 'c()'
+c(a,b)  ## Con 'a' e 'b' due liste
 
 # Matrici
 a<-matrix(c("a","b","c","d","e","f"), nrow=n, ncol=m)
@@ -12,10 +16,12 @@ A<-matrix(a, nrow=n, ncol=m)
 
 # Rispetto alle matrici gli arrays possono avere più di una dimensione
 # Gli array possono contenere solo un tipo di dato
-a<-array(c(1,2,3))
+a<-array(c(1,2,3))  ## A partire da un vettore 'c(1,2,3)'
+a<-array(b,dim=c(2,3,4))  ## Dove 'b' è un vettore, c(2,3,4) indica le dimensioni
 
 #####################################################################################
 #####################################################################################
+# VETTORI, LISTE, ARRAYS
 # Per conoscere la lunghezza usiamo 'lenght()'
 # Per ordinare in ordine alfabetico o numerico gli item usiamo 'sort()'
 # Per sapere se un certo elemento appartiene al datatype usiamo '%in%'
@@ -25,7 +31,6 @@ a<-array(c(1,2,3))
 a[c(1,3)]  ## In questo caso il primo e il terzo elemento
 # Per accedere a tutti gli elementi tranne uno selezionato usiamo i negativi
 a[c(-1)]  ## Tutti tranne il primo
-
 # Per cambiare un elemento
 a[n]<-nuovo_elemento ## In posizione 'n'
 # Per aggiungere un elemento usiamo 'append()'
@@ -34,7 +39,8 @@ append(a, valore, after=n)  ## Questo lo aggiunge dopo la posizione 'n'
 # Per rimuovere un elemento usiamo i numeri negativi
 a<-a[-n]
 
-# Matrici
+
+# MATRICI
 a[n,m]  ## Per selezionare un elemento (riga, colonna)
 a[n,]  ## Per selezionare una riga
 a[,m]  ## Per selezionare una colonna
@@ -44,17 +50,6 @@ a[,c(1,2,...,m)]  ## Per selezionare da 1 a m colonn
 # Per rimuovere righe o colonne
 a<-a[-c(n),]
 a<-a[,-c(m)]
-
-#####################################################################################
-#####################################################################################
-# Per fare sequenced vectors allora usiamo 'seq()'
-a<-seq(from=n, to=k, by=x)
-
-# Per unire due liste usiamo 'c()'
-c(a,b)  ## Con 'a' e 'b' due liste
-
-# Per array multidimensionali
-a<-array(b,dim=c(3,4,3))
 
 
 
