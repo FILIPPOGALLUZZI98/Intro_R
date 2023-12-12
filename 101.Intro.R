@@ -1,0 +1,72 @@
+# A variable name must start with a letter and can be a combination of letters, digits, period(.) 
+# and underscore(_). If it starts with period(.), it cannot be followed by a digit. A variable name 
+# cannot start with a number or underscore (_). Variable names are case-sensitive. Reserved words 
+# cannot be used as variables (TRUE, FALSE, NULL, if...)
+
+# To assign a value to a variable, use the '<-' sign
+a<-2
+# '<-' is preferred in most cases because the '=' operator can be forbidden in some context in R
+
+# You can also concatenate, or join, two or more elements, by using the 'paste()' function
+a<-"Mark"
+paste("My name is ",a)
+
+# R allows you to assign the same value to multiple variables in one line
+a,b,c<-2
+a<-b<-c<-2
+
+# We can use the 'class()' function to check the data type of a variable
+# Basic data types in R can be divided into the following types:
+# numeric
+# integer -> (1L, where the letter "L" declares this as an integer)
+# complex -> (9 + 3i)
+# character (string)
+# logical (boolean) -> (TRUE or FALSE)
+# You can convert from one type of number to another with the following functions:
+as.numeric()
+as.integer()
+as.complex()
+
+# The 'min()' and 'max()' functions can be used to find the lowest or highest number in a set
+# The 'sqrt()' function returns the square root of a number
+# The 'abs()' function returns the absolute value of a number
+# The 'ceiling()' function rounds a number upwards to its nearest integer, and the 'floor()' function
+# rounds a number downwards to its nearest integer, and returns the result
+
+# Strings are used for storing text
+# You can assign a multiline string to a variable
+a<-"My name
+is Mark"
+# R will add a '\n' at the end of each line break. This is called an escape character, and the n character
+# indicates a new line.
+# If you want the line breaks to be inserted at the same position as in the code, use the 'cat()' function
+a<-"My name is Mark"
+cat(a)
+# To find the number of characters in a string, use the 'nchar()' function
+# Use the 'grepl()' function to check if a character or a sequence of characters are present in a string
+a<-"My name is Mark"
+grepl(a)
+# To insert characters that are illegal in a string, you must use an escape character.
+# An escape character is a backslash \ followed by the character you want to insert.
+a <- "We are the so-called \"Vikings\", from the north."
+# Note that auto-printing the str variable will print the backslash in the output. You can use the
+# 'cat()' function to print it without backslash
+
+# R divides the operators in the following groups: Arithmetic operators, Assignment operators, 
+# Comparison operators, Logical operators, Miscellaneous operators.
+# Arithmetic operators are used with numeric values to perform common mathematical operations
+# +, -, *, /, ^, %% (remainder from division), %/% (integer division)
+# Comparison operators are used to compare two values
+# ==, !=, <, >, >=, <=
+# Logical operators are used to combine conditional statements
+# &	(logical AND operator), |	(logical OR operator), ! (logical NOT)
+# Miscellaneous operators are used to manipulate data
+# :	(creates a series of numbers in a sequence), %in%	(find out if an element belongs to a vector),
+# %*%	(matrix multiplication)
+
+
+
+
+
+
+
