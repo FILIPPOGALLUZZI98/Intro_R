@@ -22,7 +22,7 @@ A<-matrix(a, nrow=n, ncol=m)
 
 #####################################################################################
 #####################################################################################
-# OPERAZIONI SU VETTORI, LISTE, ARRAYS
+# OPERAZIONI SU VETTORI, ARRAY, LISTE
 # Per conoscere la lunghezza usiamo 'lenght()'
 # Per ordinare in ordine alfabetico o numerico gli item usiamo 'sort()'
 # Per sapere se un certo elemento appartiene al datatype usiamo '%in%'
@@ -35,6 +35,7 @@ a[c(1,3)]  ## In questo caso il primo e il terzo elemento
 a[c(-1)]  ## Tutti tranne il primo
 # Per cambiare un elemento
 a[n]<-nuovo_elemento ## In posizione 'n'
+a[n,m,k,...]<-nuovo_elemento  ## Per array multidimensionali
 # Per aggiungere un elemento usiamo 'append()'
 append(a, valore)  ## Questo lo aggiunge in automatico alla fine
 append(a, valore, after=n)  ## Questo lo aggiunge dopo la posizione 'n'
@@ -51,13 +52,12 @@ a[,c(1,2,...,m)]  ## Per selezionare da 1 a m colonn
 # Per rimuovere righe o colonne
 a<-a[-c(n),]
 a<-a[,-c(m)]
+a%*%b	 ## Matrix multiplication
 
 #######################################################################################################
 #######################################################################################################
 # Per ottenere informazioni su un dataset
 ?nome_dataset
-dir()  ## Allows us to view all the files available in the directory
-data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pacchetti richiamati
 summary(A) # Informazioni sul dataset
 data(A)  ## Ci fa vedere il contenuto del dataset "A"
 head(A)  ## Ci fa vedere la prima parte del dataset
