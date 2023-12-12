@@ -57,7 +57,8 @@ a%*%b	 ## Matrix multiplication
 #######################################################################################################
 #######################################################################################################
 # Per caricare dei dati da una cartella
-setwd("C:Percorso cartella")  ## 'setwd' --> set working directory
+setwd("D:Percorso_cartella")  ## 'setwd' --> set working directory
+# Se invece metto "D:\Percorso_cartella" non funziona, quindi fare attenzione a '/' dopo 'D:'
 # Poi, per passare dal nome del file ad un vettore
 a<-vect(nome_file)  ## La funzione è nel pacchetto 'terra'
 
