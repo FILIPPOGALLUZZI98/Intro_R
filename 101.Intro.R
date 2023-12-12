@@ -69,21 +69,5 @@ a <- "We are the so-called \"Vikings\", from the north."
 # :	(creates a series of numbers in a sequence), %in%	(find out if an element belongs to a vector),
 # %*%	(matrix multiplication)
 
-#######################################################################################################
-#######################################################################################################
-# Per ottenere informazioni su un dataset o una funzione
-?function_name()
-?nome_dataset
-dir()  ## Allows us to view all the files available in the directory
-data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pacchetti richiamati
-summary(A) # Informazioni sul dataset
-data(A)  ## Ci fa vedere il contenuto del dataset "A"
-head(A)  ## Ci fa vedere la prima parte del dataset
-tail(A)  ## Ci fa vedere l'ultima parte del dataset
-im.list()  ## This function produces a character vector of the names of files stored in the imageRy package
-
-
-
-
 
 
