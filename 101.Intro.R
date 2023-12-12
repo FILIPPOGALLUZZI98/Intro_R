@@ -60,14 +60,15 @@ a <- "We are the so-called \"Vikings\", from the north."
 # R divides the operators in the following groups: Arithmetic operators, Assignment operators, 
 # Comparison operators, Logical operators, Miscellaneous operators.
 # Arithmetic operators are used with numeric values to perform common mathematical operations
-# +, -, *, /, ^, %% (remainder from division), %/% (integer division)
+# +; -; *; /; ^; %% (remainder from division), %/% (integer division)
 # Comparison operators are used to compare two values
-# ==, !=, <, >, >=, <=
+# ==; !=; <; >; >=; <=
 # Logical operators are used to combine conditional statements
-# &	(logical AND operator), |	(logical OR operator), ! (logical NOT)
+# &	(logical AND operator); |	(logical OR operator); ! (logical NOT)
 # Miscellaneous operators are used to manipulate data
-# :	(creates a series of numbers in a sequence), %in%	(find out if an element belongs to a vector),
-# %*%	(matrix multiplication)
+# :	(creates a series of numbers in a sequence)
+# %in%	(find out if an element belongs to a dataset)
+
 
 
 
