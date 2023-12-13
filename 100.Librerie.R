@@ -4,6 +4,8 @@
 install.packages("nomepacchetto")
 # Se un pacchetto è già installato allora dobbiamo richiamarlo ogni volta che vogliamo usarlo
 library(nomepacchetto)
+# Per aggiornare i pacchetti
+update.packages()
 
 # Per ottenere informazioni su un pacchetto
 ?nome_pacchetto
