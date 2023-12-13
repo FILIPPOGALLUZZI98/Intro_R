@@ -13,11 +13,10 @@ dim(); ncol(); nrow()  ## Per conoscere quante righe/colonne
 
 # Per accedere alle colonne possiamo usare diversi modi
 data[1]  ## Usando la posizione della colonna
-##??## data[["Variabile_1"]]  ## Usando il titolo della colonna
+##??## data[["Variabile_1"]]  ## Usando il nome della colonna
 data$Variabile_2  ## Usando il nome della colonna
 
 # Per aggiungere una nuova riga usiamo 'rbind()', con 'd' vettore della stessa lunghezza delle righe
-# delle righe
 data<-rbind(data, d)
 # Per aggiungere una nuova colonna usiamo 'cbind()', con 'd' vettore della stessa lunghezza delle colonne
 data<-cbind(data, Variabile_4=d)
