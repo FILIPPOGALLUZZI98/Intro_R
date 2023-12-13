@@ -44,7 +44,7 @@ dev.off()
 
 # Per produrre una matrice di scatterplots
 pairs(a)
-
+# https://statisticsglobe.com/r-pairs-plot-example/
 
 
 
