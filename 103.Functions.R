@@ -3,29 +3,26 @@
 # fuori dalla funzione. If you create a variable with the same name inside a function, this
 # variable will be local, and can only be used inside the function. The global variable 
 # with the same name will remain as it was, global and with the original value.
-
 # Per ottenere informazioni su una funzione
 ?function_name()
 
 # To create a function, use the 'function()' keyword
-f <- function(){
-  'argument'}
+f <- function(){  
+  argument}
+# In questo caso non ci sono variabili in input ma semplicemente esegue un comando, esempio:
+f<-function(){
+  print("a")}
 # To call a function, use the function name followed by parenthesis
 f()
 
-# You can add as many arguments as you want, just separate them with a comma
-# The terms "parameter" and "argument" can be used for the same thing:
-# information that are passed into a function. From a function's perspective: A parameter is the 
-# variable listed inside the parentheses in the function definition. An argument is the value 
-# that is sent to the function when it is called.
-
-# Per più variabili
+# Per variabili in input
 f<-function(x,y){
-  return(f(x,y,a))}
-# Dove al posto di f(x,y,a) scrivo la forma della funzione (con 'a' come parametro)
+  return(F(x,y))}
+# Dove al posto di F(x,y,a) scrivo la forma della funzione
+# You can add as many arguments as you want, just separate them with a comma
 
-# Posso anche usare la funzione senza variabili in modo che faccia qualcosa quando la richiamo
-f<-function(){
-  print("a")}
-
+f<-function(x,y){
+  return(x+y-(x**3))
+  }
+f(2,3)
 
