@@ -12,6 +12,9 @@ plot(a, col="red")
 plot(a, cex=2)
 # Forma
 plot(a, pch=25)
+# Posso anche usare la grandezza diversa dei punti, in base alla loro caratteristica
+grandezza<-c(1,2,3,4)
+plot(a, cex=grandezza)
 
 # Per fare una linea
 plot(1:10, type="l")  ## In cui abbiamo usato la funzione per serie di numeri
