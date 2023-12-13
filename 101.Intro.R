@@ -5,7 +5,6 @@
 # non può iniziare con un numero o (_). Parole riservate non possono essere utilizzati come variabili
 
 dir()  ## Allows us to view all the files available in the directory
-data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pacchetti richiamati
 
 # To assign a value to a variable, use the '<-' sign
 # R allows you to assign the same value to multiple variables in one line
