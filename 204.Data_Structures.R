@@ -26,13 +26,19 @@ A<-matrix(a, nrow=n, ncol=m)
 # Per conoscere la lunghezza usiamo 'lenght()'
 # Per ordinare in ordine alfabetico o numerico gli item usiamo 'sort()'
 # Per sapere se un certo elemento appartiene al datatype usiamo '%in%'
-3 %in% a
 # Per accedere agli elementi usiamo a[n] con n posizione
 # Nel caso di un array multidimensionale a[n,m,k,...]
 # Per accedere a più elementi
 a[c(1,3)]  ## In questo caso il primo e il terzo elemento
 # Per accedere a tutti gli elementi tranne uno selezionato usiamo i negativi
 a[c(-1)]  ## Tutti tranne il primo
+# Oppure
+a[c(1,3:6)]  ## Tutti tranne il 2
+# Indexing lists can be a bit confusing as you can both refer to the elements of the list,
+# or the elements of the data (perhaps a matrix) in one of the list elements. There's a 
+# difference betwwen double brackets: a[n] and a[[n]] are different!!
+
+
 # Per cambiare un elemento
 a[n]<-nuovo_elemento ## In posizione 'n'
 a[n,m,k,...]<-nuovo_elemento  ## Per array multidimensionali
@@ -41,6 +47,7 @@ append(a, valore)  ## Questo lo aggiunge in automatico alla fine
 append(a, valore, after=n)  ## Questo lo aggiunge dopo la posizione 'n'
 # Per rimuovere un elemento usiamo i numeri negativi
 a<-a[-n]
+
 
 # OPERAZIONI SU MATRICI
 a[n,m]  ## Per selezionare un elemento (riga, colonna)
