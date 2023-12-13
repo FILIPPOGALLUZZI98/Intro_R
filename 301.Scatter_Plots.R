@@ -34,7 +34,7 @@ plot(1:10, type="l")  ## In cui abbiamo usato la funzione per serie di numeri
 # Grandezza linea
 plot(a, type="l", lwd=2)
 # Stile linea
-plot(a, tupe="l", lty=3)
+plot(a, type="l", lty=3)
 # 0 removes the line; 1 displays a solid line; 2 displays a dashed line; 3 displays a dotted line
 # 4 displays a "dot dashed" line; 5 displays a "long dashed" line; 6 displays a "two dashed" line
 
