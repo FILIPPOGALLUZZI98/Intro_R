@@ -39,6 +39,7 @@ setwd("D:Percorso_cartella")  ## 'setwd' --> set working directory
 # In R, the backslash is the “escape” symbol, which is followed by another symbol to indicate a special character
 # Poi, per passare dal nome del file ad un vettore
 a<-vect(nome_file)  ## La funzione è nel pacchetto 'terra'
+a<-read.cvs(nome_file)  ## Per leggere file excel
 
 # Un dataset è una collezione di dati
 # Supponiamo di avere un dataset 'AAA'
