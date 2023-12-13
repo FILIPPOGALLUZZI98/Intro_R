@@ -42,6 +42,7 @@ r <- rnorm(n, mean=XXX, sd=XXX)
 # sample each time we run our code. To do that we use set.seed. This function initializes the random 
 # number generator (to a specific point in an infinite but static sequence of numbers)
 set.seed(n)  ## 'n' è arbitrario, ogni n fornisce una sequenza diversa
+
 ###########################################################################################
 ###########################################################################################
 ## STRINGS
