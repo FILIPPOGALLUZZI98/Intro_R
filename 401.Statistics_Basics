@@ -1,26 +1,8 @@
 # Funzioni Statistiche di Base
-round(x,digits=2) # Arrotondamento
-mean()
-median()
-weighted.mean()
-quantile()
-range()
-IQR()
-SD()
-var()
-min()
-max()
-cov()
+round(x,digits=2)  ## Arrotondamento
+mean(); median(); weighted.mean(); quantile(); range(); IQR()
+SD(); var(); min(); max(); cov()
 
-########################################################################################
-# Per fare istogrammi, grafici a torta, grafici a dispersione e grafici a barre
-hist()
-pie()
-plot()
-barplot() # In questo caso l'argomento deve essere un vettore o una matrice che indica l'altezza delle barre
-
-# Per far comparire la legenda
-plot(a, legend=T)
 
 ###########################################################################
 # Per ottenere le distribuzioni di frequenze usiamo
@@ -41,7 +23,9 @@ b<-cut(a,breaks=4)
 b<-cut(a,breaks=c(1,3,5,7))
 # Con "levels(b)" si visualizzano le classi di intervallo chiuse a destra (se chiuse a sinistra si aggiunge
 # l'argomento "right=F"
-#############################################################################
+
+#############################################################################################################
+#############################################################################################################
 # Per cercare relazione lineare
 rl<-lm(y~x,data=dataset) # 'x' ed 'y' devono essere variabili del dataset
 plot(y~x,data=dataset)
