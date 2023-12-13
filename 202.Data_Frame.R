@@ -4,10 +4,7 @@
 # can be character, the second and third can be numeric or logical. However, each
 # column should have the same type of data.
 
-# Suppiniamo di avere i seguenti dati in corrispondenza 1:1
-a=c(1:10); b=seq(from=10, to=19, by=1);
-c=c(12,4,34,235,63,14,63,755,753,23)
-# Per creare una dataframe
+# Per creare una dataframe a partire da 3 vettori 'a', 'b', 'c'
 data<-data.frame(
 Variabile_1=a, Variabile_2=b, Variabile_3=c)
 # In questo modo ottengo tre colonne con in cima il nome di ogni variabile
@@ -19,10 +16,10 @@ data[1]  ## Usando la posizione della colonna
 ##??## data[["Variabile_1"]]  ## Usando il titolo della colonna
 data$Variabile_2  ## Usando il nome della colonna
 
-# Per aggiungere una nuova riga usiamo 'rbind()'
-data<-rbind(data, c(11, 20,500))
-# Per aggiungere una nuova colonna usiamo 'cbind()'
-d<-seq(from=100, to=200, by=10)
+# Per aggiungere una nuova riga usiamo 'rbind()', con 'd' vettore della stessa lunghezza delle righe
+# delle righe
+data<-rbind(data, d)
+# Per aggiungere una nuova colonna usiamo 'cbind()', con 'd' vettore della stessa lunghezza delle colonne
 data<-cbind(data, Variabile_4=d)
 # Per rimuovere una riga
 data<-data[-c(n),]
