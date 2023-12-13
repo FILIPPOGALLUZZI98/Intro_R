@@ -13,10 +13,6 @@ plot(a, cex=2)
 # Forma
 plot(a, pch=25)
 
-# Per comparare due grafici usiamo la funzione 'points()' sotto al primo grafico
-plot(a)
-points(b)
-
 # Per fare una linea
 plot(1:10, type="l")  ## In cui abbiamo usato la funzione per serie di numeri
 # Grandezza linea
@@ -26,6 +22,9 @@ plot(a, tupe="l", lty=3)
 # 0 removes the line; 1 displays a solid line; 2 displays a dashed line; 3 displays a dotted line
 # 4 displays a "dot dashed" line; 5 displays a "long dashed" line; 6 displays a "two dashed" line
 
+# Per comparare due grafici usiamo la funzione 'points()' sotto al primo grafico
+plot(a)
+points(b)
 # Per mostrare più di una linea usiamo 'lines()' sotto al primo grafico
 line1 <- c(1,2,3,4,5,10)
 line2 <- c(2,5,7,8,9,10)
@@ -43,7 +42,8 @@ plot(grafico2)
 # Se voglio chiudere i grafici
 dev.off()
 
-
+# Per produrre una matrice di scatterplots
+pairs(a)
 
 
 
