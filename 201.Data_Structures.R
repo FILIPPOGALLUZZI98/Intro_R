@@ -1,4 +1,4 @@
-# In R, tutti i valori sono considerati come vettori un array uni-dimensionale con n valori 
+# Vettori: In R, tutti i valori sono considerati come vettori un array uni-dimensionale con n valori 
 # di un certo tipo. Anche un singolo numero èun vettore di lunghezza 1
 # Un vettore è una lista di oggetti che sono dello stesso tipo
 a<-c(1,2,3,...)
@@ -13,11 +13,11 @@ A<-matrix(a, nrow=3, ncol=2)  ## Riempimento a partire dalle colonne
 A<-cbind(a,b); B<-rbind(a,b)
 a%*%b	 ## Matrix multiplication
 
-# Gli array possono avere più di una dimensione ma possono contenere solo un tipo di dato
+# Array: possono avere più di una dimensione ma possono contenere solo un tipo di dato
 a<-array(b,dim=c(2,3,4))  ## Dove 'b' è un vettore, c(2,3,4) indica le dimensioni
 # Ovviamente dim(b)=2x3x4
 
-# Una lista è una collezione di dati ordinati e modificabili
+# Liste: è una collezione di dati ordinati e modificabili
 # Una lista può contenere diversi tipi di dati al suo interno (anche vettori o matrici)
 a<-list("a",1,"abc",10,A_matrix)
 # Per unire due liste usiamo 'c()'
@@ -28,6 +28,7 @@ c(a,b)  ## Con 'a' e 'b' due liste
 # Per conoscere la lunghezza usiamo 'lenght()'
 # Per ordinare in ordine alfabetico o numerico gli item usiamo 'sort()'
 # Per sapere se un certo elemento appartiene al datatype usiamo '%in%'
+
 
 # Per ottenere gli elementi in un vettore
 a[n]  ## Con 'n' posizione
