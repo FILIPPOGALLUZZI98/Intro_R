@@ -33,16 +33,15 @@ as.numeric(); as.integer(); as.complex()
 # The 'ceiling()' function rounds a number upwards to its nearest integer, and the 'floor()' function
 # rounds a number downwards to its nearest integer, and returns the result
 
-# These functions provide information about the uniform distribution on the interval from min to max. 
-dunif(x, min = 0, max = 1, log = FALSE)  ## gives the density
-punif(q, min = 0, max = 1, lower.tail = TRUE, log.p = FALSE)  ## gives the distribution function 
-qunif(p, min = 0, max = 1, lower.tail = TRUE, log.p = FALSE)  ## gives the quantile function 
-runif(n, min = 0, max = 1)  ## runif generates random deviates
-# Arguments:
-# 'x', 'q' are vector of quantiles
-# 'p'	is vector of probabilities
-# 'n' is the number of observations
-
+# For randomly distributed numbers
+runif(n, min = 0, max = 1)  ## 'n' is the number of numbers 
+# For normally distributed numbers
+r <- rnorm(n, mean=XXX, sd=XXX)
+# If you run the functions above, you will get different numbers then the ones shown here
+# To allow for exact reproduction of examples we want to assure that we take exactly the same random
+# sample each time we run our code. To do that we use set.seed. This function initializes the random 
+# number generator (to a specific point in an infinite but static sequence of numbers)
+set.seed(n)  ## 'n' è arbitrario, ogni n fornisce una sequenza diversa
 ###########################################################################################
 ###########################################################################################
 ## STRINGS
