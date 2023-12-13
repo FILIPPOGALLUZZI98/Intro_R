@@ -5,3 +5,7 @@ setwd("D:Percorso_cartella")  ## 'setwd' --> set working directory
 img<-rast("NOME_FILE.ESTENSIONE")  ## rast() --> per importare l'immagine (raster data)
 # La funzione 'rast()' è nel pacchetto 'terra'
 # Su windows ricordare di aggiungere l'estensione alla fine perché la nasconde!!
+
+# Per plottare soltanto una parte dell'immagine
+# ext<-c(m_lon,M_lon,m_lat,M_lat)
+# crop(nome,ext)
