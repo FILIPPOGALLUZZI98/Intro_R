@@ -1,5 +1,4 @@
 # Funzioni Statistiche di Base
-round(x,digits=2)  ## Arrotondamento
 mean(); median(); weighted.mean(); quantile(); range(); IQR()
 SD(); var(); min(); max(); cov()
 
