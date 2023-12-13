@@ -56,10 +56,6 @@ data(AAA)  ## Ci fa vedere il contenuto del dataset "A"
 head(AAA)  ## Ci fa vedere la prima parte del dataset
 tail(AAA)  ## Ci fa vedere l'ultima parte del dataset
 
-# Per accedere ad una variabile
-a<-AAA$nome_variabile
-a<-AAA[[n]]  ## tra partentesi è indicata la posizone della variabile 
-
 # To find the lowest or highest value in a set
 min(AAA); max(AAA)
 # To find the index position of the max and min value in the table
