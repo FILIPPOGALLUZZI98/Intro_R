@@ -4,24 +4,26 @@
 # can be character, the second and third can be numeric or logical. However, each
 # column should have the same type of data.
 
+# Suppiniamo di avere i seguenti dati in corrispondenza 1:1
+a=c(1:10); b=seq(from=10, to=19, by=1);
+c=c(12,4,34,235,63,14,63,755,753,23)
 # Per creare una dataframe
 data<-data.frame(
-  Parametri=c("Parametro 1", "Parametro 2", "Parametro 3"), 
-  Valore_1=c(10,20,50), 
-  Valore_2=c(1,3,5))
-data
+Variabile_1=a, Variabile_2=b, Variabile_3=c)
+# In questo modo ottengo tre colonne con in cima il nome di ogni variabile
 summary(data)  ## Per Riassumere i dati 
 dim(); ncol(); nrow()  ## Per conoscere quante righe/colonne
 
 # Per accedere alle colonne possiamo usare diversi modi
 data[1]  ## Usando la posizione della colonna
-data[["Parametri"]]  ## Usando il titolo della colonna
-data$Parametri  ## Usando il nome della colonna
+##??## data[["Variabile_1"]]  ## Usando il titolo della colonna
+data$Variabile_2  ## Usando il nome della colonna
 
 # Per aggiungere una nuova riga usiamo 'rbind()'
-data<-rbind(data, c("Parametro 4", 100, 10))
+data<-rbind(data, c(11, 20,500))
 # Per aggiungere una nuova colonna usiamo 'cbind()'
-data<-cbind(data, Valore_3=c(5, 10, 25, 50))
+d<-seq(from=100, to=200, by=10)
+data<-cbind(data, Variabile_4=d)
 # Per rimuovere una riga
 data<-data[-c(n),]
 # Per rimuovere una colonna
