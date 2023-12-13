@@ -32,6 +32,17 @@ line2 <- c(2,5,7,8,9,10)
 plot(line1, type = "l", col = "blue")
 lines(line2, type="l", col = "red")
 
+########################################################################################################
+########################################################################################################
+# Mostrare due grafici nella stessa immagine accanto
+par(mfrow=c(1,2)) 
+# Dove il primo sta per le righe e il secondo per le colonne. 
+plot(grafico1) 
+plot(grafico2) 
+# Con questo ottengo due grafici uno accanto all’altro.
+# Se voglio chiudere i grafici
+dev.off()
+
 
 
 
