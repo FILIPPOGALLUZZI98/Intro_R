@@ -55,16 +55,6 @@ rownames(AAA)[which.min(AAA$nome_variabile)]
 # e che la varaiabile 'a' possa avere valori 0 e 1
 B<-A[A$a==1] # in questo modo assegno a 'B' solamente i valori 1 della variabile 'a' nel pacchetto 'A'
 
-#######################################################################################################
-#######################################################################################################
-# Per caricare dei dati da una cartella
-setwd("D:Percorso_cartella")  ## 'setwd' --> set working directory
-# Se invece metto "D:\Percorso_cartella" non funziona, quindi fare attenzione a '/' dopo 'D:'
-# In R, the backslash is the “escape” symbol, which is followed by another symbol to indicate a special character
-# Poi, per passare dal nome del file ad un vettore
-a<-vect(nome_file)  ## La funzione è nel pacchetto 'terra'
-a<-read.cvs(nome_file)  ## Per leggere file excel
-
 
 
 
