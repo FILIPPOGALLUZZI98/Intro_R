@@ -1,20 +1,17 @@
 ## RESHAPE
-reshape()
 # This function reshapes a data frame between ‘wide’ format (with repeated measurements in 
 # separate columns of the same row) and ‘long’ format (with the repeated measurements in separate rows)
 
-##  ARGUMENTS
+reshape(data, varying=XXX, v.names="XXX", times=XXX, timevar = "XXX", direction = "XXX")
 # data--> data frame
 # varying--> names of sets of variables in the wide format that correspond to single variables in long format
 # (‘time-varying’). This is canonically a list of vectors of variable names, but it can optionally be a matrix
 # of names, or a single vector of names. In each case, when direction = "long", the names can be replaced by 
 # indices which are interpreted as referring to names(data)
 # v.names--> names of variables in the long format that correspond to multiple variables in the wide format
+# times--> the values to use for a newly created timevar variable in long format
 # timevar--> the variable in long format that differentiates multiple records from the same group or individual
 # If more than one record matches, the first will be taken (with a warning)
-# idvar--> names of one or more variables in long format that identify multiple records from the same group/individual
-# ids--> the values to use for a newly created idvar variable in long format
-# times--> the values to use for a newly created timevar variable in long format
 
 ###########################################################################################################
 ###########################################################################################################
