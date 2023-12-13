@@ -33,6 +33,16 @@ as.numeric(); as.integer(); as.complex()
 # The 'ceiling()' function rounds a number upwards to its nearest integer, and the 'floor()' function
 # rounds a number downwards to its nearest integer, and returns the result
 
+# These functions provide information about the uniform distribution on the interval from min to max. 
+dunif(x, min = 0, max = 1, log = FALSE)  ## gives the density
+punif(q, min = 0, max = 1, lower.tail = TRUE, log.p = FALSE)  ## gives the distribution function 
+qunif(p, min = 0, max = 1, lower.tail = TRUE, log.p = FALSE)  ## gives the quantile function 
+runif(n, min = 0, max = 1)  ## runif generates random deviates
+# Arguments:
+# 'x', 'q' are vector of quantiles
+# 'p'	is vector of probabilities
+# 'n' is the number of observations
+
 ###########################################################################################
 ###########################################################################################
 ## STRINGS
