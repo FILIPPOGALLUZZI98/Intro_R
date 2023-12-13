@@ -21,8 +21,4 @@ f<-function(x,y){
 # Dove al posto di F(x,y,a) scrivo la forma della funzione
 # You can add as many arguments as you want, just separate them with a comma
 
-f<-function(x,y){
-  return(x+y-(x**3))
-  }
-f(2,3)
 
