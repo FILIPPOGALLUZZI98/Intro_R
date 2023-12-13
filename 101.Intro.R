@@ -44,6 +44,8 @@ is Mark"
 # If you want the line breaks to be inserted at the same position as in the code, use the 'cat()' function
 a<-"My name is Mark"
 cat(a)
+# Generare vettore con lettere
+name<-LETTERS[1:10]
 
 # To find the number of characters in a string, use the 'nchar()' function
 # Use the 'grepl()' function to check if a character or a sequence of characters are present in a string
