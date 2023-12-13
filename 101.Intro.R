@@ -19,6 +19,9 @@ data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pa
 a<-"Mark"
 paste("My name is ",a)
 
+# Sequenza di numeri
+seq(from=x, to=y, by=n)
+
 ###########################################################################################
 ###########################################################################################
 ## DATA TYPES
