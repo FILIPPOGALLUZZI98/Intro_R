@@ -59,6 +59,7 @@ a%*%b	 ## Matrix multiplication
 # Per caricare dei dati da una cartella
 setwd("D:Percorso_cartella")  ## 'setwd' --> set working directory
 # Se invece metto "D:\Percorso_cartella" non funziona, quindi fare attenzione a '/' dopo 'D:'
+# In R, the backslash is the “escape” symbol, which is followed by another symbol to indicate a special character
 # Poi, per passare dal nome del file ad un vettore
 a<-vect(nome_file)  ## La funzione è nel pacchetto 'terra'
 
