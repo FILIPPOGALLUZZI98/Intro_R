@@ -51,7 +51,9 @@ cat(a)
 
 # To find the number of characters in a string, use the 'nchar()' function
 # Use the 'grepl()' function to check if a character or a sequence of characters are present in a string
-# To insert characters that are illegal in a string, you must use an escape character.
+# Per sostituire caratteri di una stringa
+gsub("carattere_da_sost", "carattere_sostituito", "STRINGA")
+# To insert characters that are illegal in a string, you must use an escape character
 # An escape character is a backslash \ followed by the character you want to insert.
 a <- "We are the so-called \"Vikings\", from the north."
 # Note that auto-printing the str variable will print the backslash in the output. You can use the
