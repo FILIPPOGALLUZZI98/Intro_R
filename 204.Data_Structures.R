@@ -62,19 +62,31 @@ setwd("D:Percorso_cartella")  ## 'setwd' --> set working directory
 # Poi, per passare dal nome del file ad un vettore
 a<-vect(nome_file)  ## La funzione è nel pacchetto 'terra'
 
-# Per ottenere informazioni su un dataset
-?nome_dataset
-summary(A) # Informazioni sul dataset
-data(A)  ## Ci fa vedere il contenuto del dataset "A"
-head(A)  ## Ci fa vedere la prima parte del dataset
-tail(A)  ## Ci fa vedere l'ultima parte del dataset
-im.list()  ## This function produces a character vector of the names of files stored in the imageRy package
+# Un dataset è una collezione di dati
+# Supponiamo di avere un dataset 'AAA'
+# Per ottenere informazioni sul dataset 
+?AAA  ## Informazioni generali
+dim(AAA)  ## Dimensione del dataset
+names(AAA)  ## Nomi delle variabili
+rownames(AAA)  ## Nomi di ogni riga della prima colonna
+colnames(AAA)  ## Nomi di ogni colonna della prima riga
+summary(AAA)  ## Statistical summary dei dati
+data(AAA)  ## Ci fa vedere il contenuto del dataset "A"
+head(AAA)  ## Ci fa vedere la prima parte del dataset
+tail(AAA)  ## Ci fa vedere l'ultima parte del dataset
 
-#######################################################################################################
-#######################################################################################################
-# Se all’interno di un dataset (vettore, array, lista, matrice) sono presenti variabili possiamo richiamarle 
-a<-nome_dataset$nome_variabile
-a<-nome_dataset[[1]]  ## tra partentesi è indicata la posizone della variabile 
+# Per accedere ad una variabile
+a<-AAA$nome_variabile
+a<-AAA[[n]]  ## tra partentesi è indicata la posizone della variabile 
+
+# To find the lowest or highest value in a set
+min(AAA); max(AAA)
+# To find the index position of the max and min value in the table
+which.max(AAA); which.min(AAA) 
+# Or even better, combine 'which.max()' and 'which.min()' with 'rownames()'
+rownames(AAA)[which.max(AAA$nome_variabile)]
+rownames(AAA)[which.min(AAA$nome_variabile)]
+
 
 # Se dentro il dataset la variabile può assumere valori diversi ed io voglio selezionarne soltanto uno
 # Supponiamo che il dataset 'A' contenga le variabili 'a' e 'b', 
