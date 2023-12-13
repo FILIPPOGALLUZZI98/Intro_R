@@ -1,3 +1,4 @@
+# Per altre info "https://rspatial.org/intr/index.html"
 # R è case sensitive
 # Il nome di una variabile deve iniziare con una lettera e può essere una combinazione di lettere, cifre, punto(.)
 # e carattere (_). Se inizia con punto(.), non può essere seguito da una cifra. Un nome di variabile
