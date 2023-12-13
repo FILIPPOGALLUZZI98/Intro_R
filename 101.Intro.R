@@ -5,21 +5,15 @@
 # non può iniziare con un numero o (_). Parole riservate non possono essere utilizzati come variabili
 
 dir()  ## Allows us to view all the files available in the directory
-
 # To assign a value to a variable, use the '<-' sign
 # R allows you to assign the same value to multiple variables in one line
 a,b,c<-2
 a<-b<-c<-2
-
 # ';' consente di fare due operazioni nella stessa riga
 a<-1; b<-1
-
 # You can also concatenate, or join, two or more elements, by using the 'paste()' function
 a<-"Mark"
 paste("My name is ",a)
-
-# Sequenza di numeri
-seq(from=x, to=y, by=n)
 
 ###########################################################################################
 ###########################################################################################
