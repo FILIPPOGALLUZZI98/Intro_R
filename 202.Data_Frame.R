@@ -1,4 +1,5 @@
 # Data Frames are data displayed in a format as a table
+# Data Frames are special type of lists in which all the elements must have the same lenght
 # Data Frames can have different types of data inside it. While the first column 
 # can be character, the second and third can be numeric or logical. However, each
 # column should have the same type of data.
