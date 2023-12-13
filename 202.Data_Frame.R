@@ -14,7 +14,7 @@ dim(); ncol(); nrow()  ## Per conoscere quante righe/colonne
 
 # Per accedere alle colonne possiamo usare diversi modi
 data[1]  ## Usando la posizione della colonna
-data["Parametri"]]  ## Usando il titolo della colonna
+data[["Parametri"]]  ## Usando il titolo della colonna
 data$Parametri  ## Usando il nome della colonna
 
 # Per aggiungere una nuova riga usiamo 'rbind()'
