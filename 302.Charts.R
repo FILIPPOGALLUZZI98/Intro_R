@@ -41,6 +41,12 @@ barplot(y, names.arg=x, density=10)
 # Use the 'width' parameter to change the width of the bars:
 barplot(y, names.arg=x, width=c(1,2,3,4))
 
+###########################################################################################################
+###########################################################################################################
+## HISTOGRAMS
+# Per fare istogrammi
+hist()
+
 
 
 
