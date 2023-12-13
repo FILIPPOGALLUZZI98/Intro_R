@@ -31,6 +31,9 @@ line2 <- c(2,5,7,8,9,10)
 plot(line1, type = "l", col = "blue")
 lines(line2, type="l", col = "red")
 
+# Per aggiungere testo o linea
+text(); abline()
+
 ########################################################################################################
 ########################################################################################################
 # Mostrare due grafici nella stessa immagine accanto
