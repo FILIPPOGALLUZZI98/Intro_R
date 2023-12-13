@@ -4,16 +4,16 @@ b<-c("può", "contenere", "solo", "stringhe")
 # Per fare sequenced vectors allora usiamo 'seq()'
 a<-seq(from=n, to=k, by=x)
 
-# Gli array possono avere più di una dimensione ma possono contenere solo un tipo di dato
-a<-array(c(1,2,3))  ## A partire da un vettore 'c(1,2,3)'
-a<-array(b,dim=c(2,3,4))  ## Dove 'b' è un vettore, c(2,3,4) indica le dimensioni
-# Ovviamente dim(b) deve essere uguale a 2x3x4
-
 # Una lista è una collezione di dati ordinati e modificabili
 # Una lista può contenere diversi tipi di dati al suo interno
 a<-list("a",1,"abc",10)
 # Per unire due liste usiamo 'c()'
 c(a,b)  ## Con 'a' e 'b' due liste
+
+# Gli array possono avere più di una dimensione ma possono contenere solo un tipo di dato
+a<-array(c(1,2,3))  ## A partire da un vettore 'c(1,2,3)'
+a<-array(b,dim=c(2,3,4))  ## Dove 'b' è un vettore, c(2,3,4) indica le dimensioni
+# Ovviamente dim(b) deve essere uguale a 2x3x4
 
 # Matrici
 a<-matrix(c("a","b","c","d","e","f"), nrow=n, ncol=m)
