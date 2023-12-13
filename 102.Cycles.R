@@ -1,3 +1,4 @@
+## IF
 # An if statement is written with the 'if' keyword, and it is used to specify a block of code to be 
 # executed if a condition is TRUE
 if (a<b) {'scope'}
@@ -11,7 +12,7 @@ else {scope_2'}
 
 
 
-
+## WHILE
 # With the 'while' loop we can execute a set of statements as long as a condition is TRUE
 i <- 1
 while (i < 6) {'
@@ -33,7 +34,7 @@ while (i < 6) {
 
 
 
-
+## FOR
 # A for loop is used for iterating over a sequence
 for (x in 1:10) {
   'scope'}
