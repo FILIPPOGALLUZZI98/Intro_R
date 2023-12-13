@@ -12,6 +12,7 @@ data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pa
 
 #######################################################################################################
 #######################################################################################################
+readxl  ## Per leggere file excel
 bei  ## 
 terra  ## Analisi Spaziale
 sdm  ## Species Distribution Model
