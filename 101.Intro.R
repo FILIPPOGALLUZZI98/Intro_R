@@ -28,7 +28,6 @@ paste("My name is ",a)
 # You can convert from one type of number to another with the following functions:
 as.numeric(); as.integer(); as.complex()
 
-# The 'min()' and 'max()' functions can be used to find the lowest or highest number in a set
 # The 'sqrt()' function returns the square root of a number
 # The 'abs()' function returns the absolute value of a number
 # The 'ceiling()' function rounds a number upwards to its nearest integer, and the 'floor()' function
