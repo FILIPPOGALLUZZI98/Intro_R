@@ -19,17 +19,13 @@ paste("My name is ",a)
 ###########################################################################################
 ## DATA TYPES
 # We can use the 'class()' function to check the data type of a variable
-# Basic data types in R can be divided into the following types:
-# numeric
-# integer -> (1L, where the letter "L" declares this as an integer)
-# complex -> (9 + 3i)
-# character (string)
-# logical (boolean) -> (TRUE or FALSE)
+# Basic data types: numeric; integer; complex, character (string); logical (boolean)
 # You can convert from one type of number to another with the following functions:
 as.numeric(); as.integer(); as.complex()
 
 # The 'sqrt()' function returns the square root of a number
 # The 'abs()' function returns the absolute value of a number
+round(x,digits=2)  ## Arrotondamento
 # The 'ceiling()' function rounds a number upwards to its nearest integer, and the 'floor()' function
 # rounds a number downwards to its nearest integer, and returns the result
 
