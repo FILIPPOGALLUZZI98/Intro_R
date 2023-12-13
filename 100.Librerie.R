@@ -16,7 +16,7 @@ data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pa
 #######################################################################################################
 readxl  ## Per leggere file excel
 bei  ## 
-terra  ## Analisi Spaziale
+terra  ## Analisi Spaziale  ## Ulteriori Info "https://rspatial.org/pkg/index.html"
 sdm  ## Species Distribution Model
 vegan  ## Vegetation Analysis
 spatstat  ## 
