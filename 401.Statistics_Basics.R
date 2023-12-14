@@ -4,6 +4,16 @@ SD(); var(); min(); max(); cov()
 
 #############################################################################################################
 #############################################################################################################
+# Per cercare relazione lineare
+rl<-lm(y~x,data=dataset) # 'x' ed 'y' devono essere variabili del dataset
+plot(y~x,data=nome_dataset)
+abline(rl) # Per fare la retta di regressione sul grafico dei punti
+
+# More generally, you can use the 'predict' function to use the model to predict values of y for any x
+p <- predict(rl, data.frame(var_x=1:30))
+
+#############################################################################################################
+#############################################################################################################
 # Per ottenere le distribuzioni di frequenze usiamo
 a<-table(dataset)
 # oppure
@@ -23,9 +33,4 @@ b<-cut(a,breaks=c(1,3,5,7))
 # Con "levels(b)" si visualizzano le classi di intervallo chiuse a destra (se chiuse a sinistra si aggiunge
 # l'argomento "right=F"
 
-#############################################################################################################
-#############################################################################################################
-# Per cercare relazione lineare
-rl<-lm(y~x,data=dataset) # 'x' ed 'y' devono essere variabili del dataset
-plot(y~x,data=dataset)
-abline(rl) # Per fare la retta di regressione
+
