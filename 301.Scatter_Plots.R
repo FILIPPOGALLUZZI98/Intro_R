@@ -48,6 +48,7 @@ plot(a, type="l", lty=3)
 
 # Per fare un poligono
 polygon(a, col='XXX', border='XXX')  ## con 'a' vettore contenente coordinate dei vertici
+perim()  # To get the perimeter of the polygon
 
 ########################################################################################################
 ########################################################################################################
