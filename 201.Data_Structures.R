@@ -1,14 +1,14 @@
 # Vettori: In R, tutti i valori sono considerati come vettori un array uni-dimensionale con n valori 
-# di un certo tipo. Anche un singolo numero èun vettore di lunghezza 1
-# Un vettore è una lista di oggetti che sono dello stesso tipo
+# di un certo tipo. Anche un singolo numero è un vettore di lunghezza 1
+# Un vettore è una lista di oggetti che sono dello STESSO TIPO
 a<-c(1,2,3,...)
 # Per fare sequenced vectors allora usiamo 'seq()'
 a<-seq(from=n, to=k, by=x)
 
 # Matrici: sono array bi-dimensionali che contengono oggetti dello stesso tipo
 a<-c("a","b","c","d","e","f")
-A<-matrix(a, nrow=3, ncol=2)  ## Riempimento a partire dalle colonne
-# Per partire dalle righe bisogna inserire 'byrow=TRUE'
+A<-matrix(a, nrow=3, ncol=2)  ## Riempimento a partire dalle colonne; Per partire dalle righe
+# bisogna inserire 'byrow=TRUE'
 # Se vogliamo unire due vettori per colonne/righe
 A<-cbind(a,b); B<-rbind(a,b)
 a%*%b	 ## Matrix multiplication
@@ -66,9 +66,13 @@ a<-a[-c(n),]
 a<-a[,-c(m)]
 
 
-
-
-
+# Se vogliamo applicare una funzione su righe o colonne di un array/matrice usiamo 'apply()'
+apply(X, MARGIN, FUN, simplify=TRUE)
+# X è l'array o la matrice
+# MARGIN è l'indice che indica se la applico sulle righe o colonne; per esempio, per una matrice, MARGIN->1 indica
+# le righe, MARGIN->2 indica le colonne; per un array posso indicare la seconda e la terza dim MARGIN->c(2,3); se 
+# le dimensioni hanno un nome allora posso usare MARGIN->c("nome_1", "nome_2", ...)
+# FUN è la funzione che voglio applicare alle dimensioni
 
 
 
