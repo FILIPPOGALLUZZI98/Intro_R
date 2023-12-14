@@ -13,6 +13,10 @@ img<-rast("nome_file.ext")  ## rast() è nel pacchetto 'terra'
 # ext<-c(m_lon,M_lon,m_lat,M_lat)
 # crop(nome,ext)
 
+# We use the 'system.file' function to get the full path name of the file’s location. We need to do this as the location
+# of this file depends on where the package is installed. You should not use the system.file function for your own files
+file_name <- system.file("file_da_caricare", package="nome_pacchetto")
+
 # imageRy
 im.list() # This function produces a character vector of the names of files stored in the 'imageRy' package directory.
 im.import() # This function imports a chosen image stored in the 'imageRy' package.
