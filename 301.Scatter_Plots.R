@@ -13,8 +13,8 @@ plot(a, cex=2)
 # Forma
 plot(a, pch=25)
 # Posso anche usare la grandezza diversa dei punti, in base al loro valore
-grandezza<-c(1,2,3,4)
-plot(a, cex=grandezza)
+grandezza<-c(1,2,3,4)  ## Oppure anche una funzione di un vettore, come "grand<-1+ precip/500"
+plot(a, cex=grandezza)  ## Imposto la grandezza variabile in base al valore del punto
 
 # Per comparare due grafici a dispersione usiamo la funzione 'points()' sotto al primo grafico
 plot(a)
@@ -28,6 +28,14 @@ lines(line2, type="l", col = "red")
 # Per aggiungere testo (per esempio etichette per ogni punto)
 label=c("Elem_1","Elem_2","Elem_3")
 text(a, label, pos="n")
+
+# Per fare la legendaa
+legend("topright, col='XXX')
+# Se nella legenda voglio mostrare i cerchi variabili 
+leg <- c(100, 250, 500, 1000)  ## Creo un vettore con le dimensioni standard
+legend.psize <- 1+leg/500
+legend("topright", legend=leg, pch=20, pt.cex=legend.psize, col='XXX', bg='XXX')
+
 
 # Per fare una linea
 plot(1:10, type="l")  ## In cui abbiamo usato la funzione per serie di numeri
