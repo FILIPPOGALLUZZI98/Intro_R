@@ -15,7 +15,19 @@ reshape(data, varying=XXX, v.names="XXX", times=XXX, timevar = "XXX", direction 
 
 ###########################################################################################################
 ###########################################################################################################
-##  ESEMPIO 1 ---> Da "largo" a "lungo"
+## MERGE
+# Se abbiamo due dataframe con dati che rappresentano gli stessi casi, questi
+# dataframe possono esseere uniti insieme
+ab<-merge(a, b, bu="nome_var")
+
+# Possiamo anche aggiungere 'all.x' o 'all.y': if TRUE, then extra rows (columns) will be added to
+# the output, one for each row in x that has no matching row in y. These rows will
+# have NAs in those columns that are usually filled with values from y. The default is
+# FALSE, so that only rows with data from both x and y are included in the output.
+
+###########################################################################################################
+###########################################################################################################
+##  ESEMPIO 1 ---> Reshape Da "largo" a "lungo"
 dd <- read.csv('https://stats.idre.ucla.edu/stat/data/hsb2.csv')
 head(dd); dim(dd)
 # Abbiamo 11 colonne con i nomi(id, female, race, ses, ...) e 200 righe (valori)
@@ -39,7 +51,7 @@ rownames(x)<-NULL
 
 ###########################################################################################################
 ###########################################################################################################
-##  ESEMPIO 2 ---> Da "lungo" a "largo"
+##  ESEMPIO 2 ---> Reshape Da "lungo" a "largo"
 # To go from long to wide we need to use 'idvar' and 'timevar'. 'idvar' identifies the variables that identify
 # a single case. In contrast, 'timevar' indicates the variable that has the identifiers that become variables in
 # the wide format. The remaining variable should have the values that match these new variables
