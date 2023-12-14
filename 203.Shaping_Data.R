@@ -18,7 +18,7 @@ reshape(data, varying=XXX, v.names="XXX", times=XXX, timevar = "XXX", direction 
 ## MERGE
 # Se abbiamo due dataframe con dati che rappresentano gli stessi casi, questi
 # dataframe possono esseere uniti insieme
-ab<-merge(a, b, bu="nome_var")
+ab<-merge(a, b, by="nome_var")
 
 # Possiamo anche aggiungere 'all.x' o 'all.y': if TRUE, then extra rows (columns) will be added to
 # the output, one for each row in x that has no matching row in y. These rows will
