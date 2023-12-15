@@ -66,9 +66,6 @@ perim()  # To get the perimeter of the polygon
 
 ########################################################################################################
 ########################################################################################################
-# To add features on a map
-plot(new_feature, add=TRUE)
-
 # Mostrare due grafici nella stessa immagine accanto
 par(mfrow=c(1,2)) 
 # Dove il primo sta per le righe e il secondo per le colonne. 
