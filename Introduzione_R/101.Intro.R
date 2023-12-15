@@ -15,7 +15,7 @@ paste("My name is ",a)
 # For randomly distributed numbers
 runif(n, min = 0, max = 1)  ## 'n' is the number of numbers 
 # For normally distributed numbers
-r <- rnorm(n, mean=XXX, sd=XXX)
+rnorm(n, mean=XXX, sd=XXX)
 # If you run the functions above, you will get different numbers then the ones shown here
 # To allow for exact reproduction of examples we want to assure that we take exactly the same random
 # sample each time we run our code. To do that we use set.seed. This function initializes the random 
