@@ -25,10 +25,9 @@ c(a,b)  ## Con 'a' e 'b' due liste
 
 #####################################################################################
 #####################################################################################
-# Per conoscere la lunghezza usiamo 'lenght()'
-# Per ordinare in ordine alfabetico o numerico gli item usiamo 'sort()'
-# Per sapere se un certo elemento appartiene al datatype usiamo '%in%'
-
+lenght()  ## Per conoscere la lunghezza
+sort()  ## Per ordinare in ordine alfabetico o numerico gli item
+%in%  ## Per sapere se un certo elemento appartiene al datatype 
 
 # Per ottenere gli elementi in un vettore
 a[n]  ## Con 'n' posizione
