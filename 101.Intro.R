@@ -14,6 +14,17 @@ a<-1; b<-1
 # You can also concatenate, or join, two or more elements, by using the 'paste()' function
 a<-"Mark"
 paste("My name is ",a)
+# For randomly distributed numbers
+runif(n, min = 0, max = 1)  ## 'n' is the number of numbers 
+# For normally distributed numbers
+r <- rnorm(n, mean=XXX, sd=XXX)
+# If you run the functions above, you will get different numbers then the ones shown here
+# To allow for exact reproduction of examples we want to assure that we take exactly the same random
+# sample each time we run our code. To do that we use set.seed. This function initializes the random 
+# number generator (to a specific point in an infinite but static sequence of numbers)
+set.seed(n)  ## 'n' è arbitrario, ogni n fornisce una sequenza diversa
+
+rainbow(n)  ## 'n' numero di colori da usare
 
 ###########################################################################################
 ###########################################################################################
@@ -28,16 +39,6 @@ as.numeric(); as.integer(); as.complex()
 round(x,digits=2)  ## Arrotondamento
 # The 'ceiling()' function rounds a number upwards to its nearest integer, and the 'floor()' function
 # rounds a number downwards to its nearest integer, and returns the result
-
-# For randomly distributed numbers
-runif(n, min = 0, max = 1)  ## 'n' is the number of numbers 
-# For normally distributed numbers
-r <- rnorm(n, mean=XXX, sd=XXX)
-# If you run the functions above, you will get different numbers then the ones shown here
-# To allow for exact reproduction of examples we want to assure that we take exactly the same random
-# sample each time we run our code. To do that we use set.seed. This function initializes the random 
-# number generator (to a specific point in an infinite but static sequence of numbers)
-set.seed(n)  ## 'n' è arbitrario, ogni n fornisce una sequenza diversa
 
 ###########################################################################################
 ###########################################################################################
