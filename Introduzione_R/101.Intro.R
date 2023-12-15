@@ -10,6 +10,9 @@ paste()  ## To concatenate, or join, two or more elements
 a<-"Mark"
 paste("My name is ",a)
 
+# Take a sample of the specified size ('n') from the elements of 'x'
+sample(x,n,replace=FALSE)  ## Sceglie 'n' elementi tra 'x'
+
 # For randomly distributed numbers
 runif(n, min = 0, max = 1)  ## 'n' is the number of numbers 
 # For normally distributed numbers
