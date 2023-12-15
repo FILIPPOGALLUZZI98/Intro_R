@@ -14,6 +14,7 @@ a<-1; b<-1
 # You can also concatenate, or join, two or more elements, by using the 'paste()' function
 a<-"Mark"
 paste("My name is ",a)
+
 # For randomly distributed numbers
 runif(n, min = 0, max = 1)  ## 'n' is the number of numbers 
 # For normally distributed numbers
