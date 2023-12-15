@@ -9,10 +9,7 @@ a<-seq(from=n, to=k, by=x)
 a<-c("a","b","c","d","e","f")
 A<-matrix(a, nrow=3, ncol=2)  ## Riempimento a partire dalle colonne; Per partire dalle righe
 # bisogna inserire 'byrow=TRUE'
-# Se vogliamo unire due vettori per colonne/righe
-A<-cbind(a,b); B<-rbind(a,b)
 a%*%b	 ## Matrix multiplication
-
 # Array: possono avere più di una dimensione ma possono contenere solo un tipo di dato
 a<-array(b,dim=c(2,3,4))  ## Dove 'b' è un vettore, c(2,3,4) indica le dimensioni
 # Ovviamente dim(b)=2x3x4
@@ -28,6 +25,9 @@ c(a,b)  ## Con 'a' e 'b' due liste
 lenght()  ## Per conoscere la lunghezza
 sort()  ## Per ordinare in ordine alfabetico o numerico gli item
 %in%  ## Per sapere se un certo elemento appartiene al datatype 
+
+# Se vogliamo unire due vettori per colonne/righe
+A<-cbind(a,b); B<-rbind(a,b)
 
 # Per ottenere gli elementi in un vettore
 a[n]  ## Con 'n' posizione
@@ -58,6 +58,7 @@ e <- list(list(1:3), c('a', 'b', 'c', 'd'), m)
 # Per aggiungere un elemento usiamo 'append()'
 append(a, valore)  ## Questo lo aggiunge in automatico alla fine
 append(a, valore, after=n)  ## Questo lo aggiunge dopo la posizione 'n'
+
 # Per rimuovere un elemento usiamo i numeri negativi
 a<-a[-n]
 # Per rimuovere righe o colonne
