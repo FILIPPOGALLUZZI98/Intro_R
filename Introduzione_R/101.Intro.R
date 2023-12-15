@@ -4,11 +4,9 @@
 # non può iniziare con un numero o (_). Parole riservate non possono essere utilizzati come variabili
 
 dir()  ## Allows us to view all the files available in the directory
-# ';' consente di fare due operazioni nella stessa riga
-# To assign a value to a variable, use the '<-' sign
 # R allows you to assign the same value to multiple variables in one line
 a,b,c<-2; a<-b<-c<-2
-# You can also concatenate, or join, two or more elements, by using the 'paste()' function
+paste()  ## To concatenate, or join, two or more elements
 a<-"Mark"
 paste("My name is ",a)
 
@@ -16,10 +14,7 @@ paste("My name is ",a)
 runif(n, min = 0, max = 1)  ## 'n' is the number of numbers 
 # For normally distributed numbers
 rnorm(n, mean=XXX, sd=XXX)
-# If you run the functions above, you will get different numbers then the ones shown here
-# To allow for exact reproduction of examples we want to assure that we take exactly the same random
-# sample each time we run our code. To do that we use set.seed. This function initializes the random 
-# number generator (to a specific point in an infinite but static sequence of numbers)
+# To assure that we take exactly the same random sample each time we run our code
 set.seed(n)  ## 'n' è arbitrario, ogni n fornisce una sequenza diversa
 
 rainbow(n)  ## 'n' numero di colori da usare
