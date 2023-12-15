@@ -14,15 +14,16 @@ data()  ## VUOTO! ci fa vedere le descrizioni dei datasets contenuti dei vari pa
 
 #######################################################################################################
 #######################################################################################################
-readxl  ## Per leggere file excel
-bei  ## 
 terra  ## Analisi Spaziale  ## Ulteriori Info "https://rspatial.org/pkg/index.html"
+imageRy  ## Per installarlo: library(devtools); install_github("ducciorocchini/imageRy")
+ggplot  ##
+readxl  ## Per leggere file excel
+leaflet  ## To make interactive maps.
+bei  ## 
 sdm  ## Species Distribution Model
 vegan  ## Vegetation Analysis
 spatstat  ## 
 devtools  ## 
-imageRy  ## Per installarlo: library(devtools); install_github("ducciorocchini/imageRy")
 viridis  ## 
-ggplot  ##
 ncdf4  ##
 
