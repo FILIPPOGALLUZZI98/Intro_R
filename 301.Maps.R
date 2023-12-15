@@ -1,32 +1,13 @@
 # zoom(x) and clicking on the map twice --> To indicate where to zoom to
 # sel(x) --> To save a spatial subset to a new object
-# click(x) --> To interactively query a SpatRaster by clicking once or several times 
-# on a map plot
-
-# Per fare uno scatterplot usiamo la funzione 'plot()'
-# Il primo parametro specifica la coordinata 'x', il secondo 'y'
-plot(1,2)
-# Per plottare più punti possiamo usare un vettore
-plot(c(1,2,3,4,5),c(4,8,12,45,35))
-# Grandezza dei punti
-plot(a, cex=2)
-# Forma dei punti
-plot(a, pch=25)
-# Colore dei punti
-plot(a, col="colore")
-# Posso anche usare la grandezza diversa dei punti, in base al loro valore
-grandezza<-c(1,2,3,4)  ## Oppure anche una funzione di un vettore, come "grand<-1+ precip/500"
-plot(a, cex=grandezza)  ## Imposto la grandezza variabile in base al valore del punto
+# click(x) --> To interactively query a SpatRaster by clicking once or several times on a map plot
 
 
-# Per customizzare il grafico
+# Titolo e Assi
 plot(x,  main="TITOLO", xlab="NOME", ylab="NOME", col=cl)
-# Per fare la legendaa
+
+# Legenda
 legend("topright, col='XXX')
-# Se nella legenda voglio mostrare i cerchi variabili 
-leg <- c(100, 250, 500, 1000)  ## Creo un vettore con le dimensioni standard
-legend.psize <- 1+leg/500
-legend("topright", legend=leg, pch=20, pt.cex=legend.psize, col='XXX', bg='XXX')
 
 # Per aggiungere testo (per esempio etichette per ogni punto)
 label=c("Elem_1","Elem_2","Elem_3")
@@ -49,15 +30,27 @@ plot(x, c("Var_1", "Var_2"), col=cl)
 
 ########################################################################################################
 ########################################################################################################
-# Per comparare due grafici a dispersione usiamo la funzione 'points()' sotto al primo grafico
-plot(a)
-points(b)
-# Per mostrare più di una linea usiamo 'lines()' sotto al primo grafico
-line1 <- c(1,2,3,4,5,10)
-line2 <- c(2,5,7,8,9,10)
-plot(line1, type = "l", col = "blue")
-lines(line2, type="l", col = "red")
+# Per fare uno scatterplot usiamo la funzione 'plot()'
+# Il primo parametro specifica la coordinata 'x', il secondo 'y'
+plot(1,2)
+# Per plottare più punti possiamo usare un vettore
+plot(c(1,2,3,4,5),c(4,8,12,45,35))
 
+plot(a, cex=2, pch=25, col="colore")
+# cex = Grandezza dei punti
+# pch = Colore dei punti
+# col = Colore dei punti
+# Posso anche usare la grandezza diversa dei punti, in base al loro valore
+grandezza<-c(1,2,3,4)  ## Oppure anche una funzione di un vettore, come "grand<-1+ precip/500"
+plot(a, cex=grandezza)  ## Imposto la grandezza variabile in base al valore del punto
+
+# Se nella legenda voglio mostrare figure variabili in base al valore 
+leg <- c(100, 250, 500, 1000)  ## Creo un vettore con le dimensioni standard
+legend.psize <- 1+leg/500
+legend("topright", legend=leg, pch=20, pt.cex=legend.psize, col='XXX', bg='XXX')
+
+########################################################################################################
+########################################################################################################
 # Per fare una linea
 plot(1:10, type="l")  ## In cui abbiamo usato la funzione per serie di numeri
 # Grandezza linea
@@ -73,6 +66,9 @@ perim()  # To get the perimeter of the polygon
 
 ########################################################################################################
 ########################################################################################################
+# To add features on a map
+plot(new_feature, add=TRUE)
+
 # Mostrare due grafici nella stessa immagine accanto
 par(mfrow=c(1,2)) 
 # Dove il primo sta per le righe e il secondo per le colonne. 
@@ -82,9 +78,20 @@ plot(grafico2)
 # Se voglio chiudere i grafici
 dev.off()
 
+# Per comparare due grafici a dispersione usiamo la funzione 'points()' sotto al primo grafico
+plot(a)
+points(b)
+
+# Per mostrare più di una linea usiamo 'lines()' sotto al primo grafico
+line1 <- c(1,2,3,4,5,10)
+line2 <- c(2,5,7,8,9,10)
+plot(line1, type = "l", col = "blue")
+lines(line2, type="l", col = "red")
+
 # Per produrre una matrice di scatterplots
 pairs(a)
 # https://statisticsglobe.com/r-pairs-plot-example/
+
 
 
 
