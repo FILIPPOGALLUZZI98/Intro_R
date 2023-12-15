@@ -22,4 +22,11 @@ im.list() # This function produces a character vector of the names of files stor
 im.import() # This function imports a chosen image stored in the 'imageRy' package.
 # im.plotRGB -->This function plots a RGB image from a SpatRaster object
 
+#############################################################################################################################
+#############################################################################################################################
+# Supponiamo di creare un dataframe 'd'
+# Per fare un file excel
+write.csv(d, "nome.csv", row.names=FALSE)
+# Per fare un file di lettura
+write.table(d, "nome.dat", row.names=FALSE)
 
