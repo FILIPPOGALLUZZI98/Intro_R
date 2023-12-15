@@ -1,0 +1,53 @@
+% In LateX i commenti sono con '%'
+% In LateX invece di 'library' si usa '\usepackage'
+% Se lascio una riga vuota nel testo allora ottengo un'indentazione 
+% Se voglio rimuovere l'indentazione allora '\noindent'
+% Se voglio ottenere una separazione nel testo '\bigskip' o '\smallskip'
+% [] for structures!
+
+% Per fare i paragrafi in file diversi e poi unire nel main
+\input{nome_paragrafo_1} 
+\input{nome_paragrafo_2} 
+
+% LABEL
+\label{nome_tag}
+\ref{nome_tag}
+% Con il pacchetto 'hyperref' i riferimenti diventano rossi e posso ottenere 
+% collegamenti diretti nel PDF
+
+% ITEMIZATION
+\begin{itemize}
+  \item testo
+  \item testo
+\end{itemize}
+
+% ENUMERATION
+\begin{enumerate}
+  \item testo
+  \item testo
+\end{numerate}
+
+
+% STRUTTURA DOCUMENTO
+\documentclass{xxx}  %% (article, report, book, slide, beamer) 
+\usepackage{nome_pacchetto}
+\title{Titolo}
+\author{Nome Autore}
+\date{yy,yy,yyyy}  %% Per togliere la data lasciare argomento vuoto
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\end{abstract}
+
+\tableofcontents
+
+\section{TITOLO}\label{etichetta}
+\subsection{titolo}\label{etichetta}
+\subsubsection{titolo.1}\label{etichetta}
+\end{document}
+
+
+
+
+
