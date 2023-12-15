@@ -5,10 +5,8 @@
 
 # Titolo e Assi
 plot(x,  main="TITOLO", xlab="NOME", ylab="NOME", col=cl)
-
 # Legenda
 legend("topright, col='XXX')
-
 # Per aggiungere testo (per esempio etichette per ogni punto)
 label=c("Elem_1","Elem_2","Elem_3")
 text(a, label, pos="n")
@@ -17,16 +15,10 @@ text(a, label, pos="n")
 plot(x, mar=XXX, plg=list(x="topright", title="XXX", bty = "o"))
 # mar --> margini???
 # plg --> 'plot legend' --> x= position; title; bty=???
-
 # Per aggiungere una scala diversa da quella di default
 plot(x, axes=FALSE)  ## To remove deafault axe
 axis(1, at=c(nn,nn)); axis(1)  ## 1 si riferisce all'asse 'x'
 axis(2, at=c(nn,nn)); axis(2)  ## axis(n) per mostrare l'asse sul grafico
-
-# If you want to color a map it is probably easiest to use an attribute
-plot(x, "Var", col=cl)
-# You can request maps for multiple variables
-plot(x, c("Var_1", "Var_2"), col=cl)
 
 ########################################################################################################
 ########################################################################################################
