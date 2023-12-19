@@ -9,6 +9,14 @@
 \input{nome_paragrafo_1} 
 \input{nome_paragrafo_2} 
 
+% Per Outline all'inizio della sezione
+\AtBeginSection{
+\begin{frame}
+\frametitle{TITOLO}
+\tableofcontents{currentsection}
+\end{frame}
+}
+
 % LABEL
 \label{nome_tag}
 \ref{nome_tag}
