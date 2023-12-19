@@ -25,6 +25,6 @@ sdm  ## Species Distribution Model
 vegan  ## Vegetation Analysis
 spatstat  ## 
 devtools  ## 
-viridis  ## 
+viridis  ## Per fare palette di colori
 ncdf4  ##
 
