@@ -25,6 +25,12 @@
 Qui devo inserire il testo della slide
 \end{frame}
 
+&FIGURE
+\begin{frame}{Adding a figure}
+\centering
+ \includegraphics[width=0.4\textwidth]{nome figura 1}
+ \includegraphics[width=0.4\textwidth]{nome figura 2}
+\end{frame}
 % Per mettere un testo sopra l'immagine
 \begin{frame}{text plus figure}
 \centering
@@ -33,12 +39,19 @@ Qui devo inserire il testo della slide
 \includegraphics[width=0.6\textwidth]{NomeFigura} 
 \end{frame}
 
-\begin{frame}{Adding a figure}
+% COLONNE
+\begin{frame}{Column in beamer}
+\begin{columns}
 \centering
- \includegraphics[width=0.4\textwidth]{nome figura 1}
- \includegraphics[width=0.4\textwidth]{nome figura 2}
+ \columnn{0.5\textwidth} 
+ TEXT
+ \end{columns}
+\begin{columns}
+\centering
+ \columnn{0.5\textwidth}
+ TEXT
+ \end{columns}
 \end{frame}
-
 
 \end{document}
 
