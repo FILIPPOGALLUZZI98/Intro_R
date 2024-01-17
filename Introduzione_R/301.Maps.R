@@ -56,6 +56,10 @@ plot(a, type="l", lty=3)
 polygon(a, col='XXX', border='XXX')  ## con 'a' vettore contenente coordinate dei vertici
 perim()  # To get the perimeter of the polygon
 
+# Per cercare il centro di un poligono A
+centr<-centroids(A)
+points(centr, cex=6, pch=20, col='white')
+
 ########################################################################################################
 ########################################################################################################
 # Mostrare due grafici nella stessa immagine accanto
