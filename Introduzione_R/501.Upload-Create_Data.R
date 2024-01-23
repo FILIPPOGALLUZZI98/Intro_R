@@ -5,7 +5,7 @@ setwd("D:Percorso_cartella")  ## 'setwd' --> set working directory
 
 # Poi, per utilizzare i dati devo trasformarli in un tipo di dato che R può interpretare
 # SU WINDOWS RICORDARE DI AGGIUNGERE L'ESTENSIONE PERCHE LA NASCONDE!!
-a<-read.cvs(nome_file.ext)  ## Per leggere file excel
+a<-read.csv(nome_file.ext)  ## Per leggere file excel
 a<-vect(nome_file.ext)  ## La funzione è nel pacchetto 'terra'
 img<-rast("nome_file.ext")  ## rast() è nel pacchetto 'terra'
 
