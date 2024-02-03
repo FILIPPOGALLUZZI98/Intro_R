@@ -5,6 +5,13 @@
 install.packages("nomepacchetto")
 # Se un pacchetto è già installato allora dobbiamo richiamarlo ogni volta che vogliamo usarlo
 library(nomepacchetto)
+
+# Per non vedere i messaggi dei pacchetti
+suppressPackageStartupMessages({
+  library(nome_pacchetto_1)
+  library(nome_pacchetto_2)
+})
+
 # Per aggiornare i pacchetti
 update.packages()
 
