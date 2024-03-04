@@ -1,3 +1,12 @@
+# Un dataset ds è composto da variabili e coordinate.
+# Ogni valore di una variabile è indicato dalle coordinate.
+# Supponiamo che ds abbia ciome variabili sst e t2s e che abbia
+# come coordinate latitudine, longitudine e tempo.
+# Per chiamare le variabili, per esempio sst e t2s:
+sst=ds.sst
+t2s=ds.t2s
+
+
 # Python uses indentation to indicate a block of code
 # Python will ignore string literals that are not assigned to a variable, you can add a
 # multiline string (triple quotes) in your code, and place your comment inside it
@@ -76,6 +85,28 @@ def funct(x,y,...):
 # To call a function, use the function name followed by parenthesis
 funct(a, b, ...)
 
+
+#################################################################################################################
+#################################################################################################################
+# size() dimensione dei dati
+# shape() la forma dei dati
+# max() Returns the maximum from the passed elements or if a single iterable is passed, the max element in the iterable.
+# min() Returns the minimum from the passed elements or if a single iterable is passed, the minimum element in the iterable.
+# mean() Returns the average of the array elements.
+# median() Returns the median of the array elements.
+# sum() Returns the sum of the array elements
+# abs() Returns the absolute value of a number
+# divmod()  Returns the quotient and remainder resulting from dividing the first argument by the second
+# modulo(x%y) Returns x to the power y.
+# round(x,n) Returns the floating point value of x rounded to n digits after the decimal point.
+# around(x,n) Returns the floating point array A rounded to n digits after the decimal point
+# range(x,y,n) This function creates lists of integers in an arithmetic progression.
+# sort() Sorts the array elements in smallest to largest order.
+# transpose() Returns the transpose of an array by permuting the dimensions.
+# dot(a,b) dot product between two arrays
+# cross(a,b) cross product between two arrays
+# matmlu(a,b) matrix multiplication
+# count('abc') counts the number of occurrences of a substring
 
 
 
