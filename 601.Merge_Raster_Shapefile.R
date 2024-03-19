@@ -16,7 +16,6 @@ suppressPackageStartupMessages({
 ####  CARICARE I DATI  ##########################################################################
 # Carichiamo i dati shapefile
 shp = sf::read_sf("^Merge_Raster_Shapefile_Gregor/nuts/NUTS_RG_60M_2021_3035.shp")
-plot(shp[,"geometry"])
 # Consideriamo soltanto un subset dello shapefile (usiamo la variabile CNTR_CODE)
 shp = subset(shp, CNTR_CODE == "IT")
 # Impostiamo il livello di regioni che vogliamo usare (in questo caso NUTS 3)
