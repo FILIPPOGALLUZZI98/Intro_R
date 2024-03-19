@@ -28,7 +28,7 @@ shp = sf::st_transform(shp, sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no
 # Usiamo la funzione brick perché il raster contiene più layer
 r <- raster::brick("^Merge_Raster_Shapefile_Gregor/spei12_italy.nc")
 # Proiettiamo le coordinate spaziali usate nello shapefile sul raster
-proj4string(r) = raster::crs(shp)    
+proj4string(r) <- raster::crs(shp)    
 # Plottiamo il primo layer del rasterbrick
 image(r[[1]])   
 
