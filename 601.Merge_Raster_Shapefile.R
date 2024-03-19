@@ -122,6 +122,7 @@ ggplot(subset(plot.df, region %in% c("Pordenone", "Milano", "Palermo", "Bologna"
   labs(fill="SPEI-12",col="SPEI-12")  
 
 
+
 #################################################################################################
 ####  VISUALIZZARE SERIE TEMPORALI  #############################################################
 
