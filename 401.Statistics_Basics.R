@@ -1,4 +1,4 @@
-# Funzioni Statistiche di Base
+# Funzioni Base
 mean(); median(); weighted.mean(); quantile(); range(); IQR()
 SD(); var(); min(); max(); cov(); cor()
 
