@@ -1,4 +1,3 @@
-# Per altre info "https://rspatial.org/intr/index.html"
 # Il nome di una variabile deve iniziare con una lettera e può essere una combinazione di lettere, cifre, punto(.)
 # e carattere (_). Se inizia con punto(.), non può essere seguito da una cifra. Un nome di variabile
 # non può iniziare con un numero o (_). Parole riservate non possono essere utilizzati come variabili
