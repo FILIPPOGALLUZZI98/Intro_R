@@ -63,7 +63,7 @@ ggplot(shp, aes(fill = log(population2022))) +
 
 
 #################################################################################################
-####  PLOT  #####################################################################################
+####  PLOT DROUGHT DATA  ########################################################################
 ggplot() +     
   # plot the shape file as background layer (with grey borders and white provinces)
   geom_sf(data=shp, col="grey", fill="white") +  
@@ -144,6 +144,7 @@ ggplot(subset(plot.df, region %in% c("Pordenone", "Milano", "Palermo", "Bologna"
 # Point data sono oggetti spaziali dove ogni data point è caratterizzato da coordinate in uno spazio
 # bidimensionale. I dati seguenti sono relativi alle proteste e rivolte in italia 2020-2022
 acled <- read.csv("^Merge_Raster_Shapefile_Gregor/acled_italy.csv")
+
 # Plot the data
 ggplot(shp) +           
   # plot the outlines of the shapefile of italy (using black borders and transparent filling)
