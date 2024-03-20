@@ -49,6 +49,18 @@ plot.df <- plot.df[complete.cases(plot.df), ]
 popdat = read.csv("italy_population_nuts3.csv")
 shp    = left_join(shp, popdat, by=c("NUTS_ID" = "nuts3_it"))
 
+# Plot dei dati sulla popolazione
+# Plot the shp file, color the filling of each province based on the logarithm of variable "population2022" 
+ggplot(shp, aes(fill = log(population2022))) +      
+  # geom_sf() plots polygon data from an sf object (with black outlines)
+  geom_sf(col="black") +                   
+  # set a theme that is more visually appealing than the standard theme of ggplo2
+  theme_bw() +         
+  # set viridis color palette for filling, with some customization options
+  scale_fill_viridis_c(option="inferno", end=0.8) +     
+  # rename the legend title
+  labs(fill = "Log(Population 2022)")
+
 
 #################################################################################################
 ####  PLOT  #####################################################################################
