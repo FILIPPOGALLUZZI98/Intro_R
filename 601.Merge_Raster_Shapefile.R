@@ -8,6 +8,7 @@ suppressPackageStartupMessages({
   library(reshape2)        ## useful for manipulating data sets
   library(ggplot2)         ## useful for data visualization
   library(ggrepel)         ## useful for labeling point plots in ggplot2
+  library(lubridate)
   library(zoo)   
 })
 
@@ -126,8 +127,7 @@ ggplot(subset(plot.df, region %in% c("Pordenone", "Milano", "Palermo", "Bologna"
 ####  POINT DATA ON PROTESTS ITALY  #############################################################
 # Point data sono oggetti spaziali dove ogni data point è caratterizzato da coordinate in uno spazio
 # bidimensionale. I dati seguenti sono relativi alle proteste e rivolte in italia 2020-2022
-acled <- read.csv("acled_italy.csv")
-
+acled <- read.csv("^Merge_Raster_Shapefile_Gregor/acled_italy.csv")
 # Plot the data
 ggplot(shp) +           
   # plot the outlines of the shapefile of italy (using black borders and transparent filling)
