@@ -22,6 +22,10 @@ shp <- subset(shp, CNTR_CODE == "IT")
 # Impostiamo il livello di regioni che vogliamo usare (in questo caso NUTS 3)
 shp <- subset(shp, LEVL_CODE == 3)
 plot(shp[,"geometry"])  
+# Dati ISTAT sulla popolazione italiana
+popdat <- read.csv("^Merge_Raster_Shapefile_Gregor/italy_population_nuts3.csv")
+shp <- left_join(shp, popdat, by=c("NUTS_ID" = "nuts3_it"))
+
 # Impostiamo il sistema di coordinate corretto
 shp <- sf::st_transform(shp, sp::CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")) 
 
@@ -45,25 +49,10 @@ plot.df <- as.data.frame(r[[488]], xy = TRUE)
 # Infine eliminamo i dati che mancano
 plot.df <- plot.df[complete.cases(plot.df), ] 
 
-# Dati ISTAT sulla popolazione italiana
-popdat = read.csv("italy_population_nuts3.csv")
-shp    = left_join(shp, popdat, by=c("NUTS_ID" = "nuts3_it"))
-
-# Plot dei dati sulla popolazione
-# Plot the shp file, color the filling of each province based on the logarithm of variable "population2022" 
-ggplot(shp, aes(fill = log(population2022))) +      
-  # geom_sf() plots polygon data from an sf object (with black outlines)
-  geom_sf(col="black") +                   
-  # set a theme that is more visually appealing than the standard theme of ggplo2
-  theme_bw() +         
-  # set viridis color palette for filling, with some customization options
-  scale_fill_viridis_c(option="inferno", end=0.8) +     
-  # rename the legend title
-  labs(fill = "Log(Population 2022)")
-
 
 #################################################################################################
-####  PLOT DROUGHT DATA  ########################################################################
+####  PLOT DATA  ################################################################################
+# Plot dati sulla siccità
 ggplot() +     
   # plot the shape file as background layer (with grey borders and white provinces)
   geom_sf(data=shp, col="grey", fill="white") +  
@@ -79,6 +68,17 @@ ggplot() +
   xlab("") +               
   # no title on y axis
   ylab("")  
+
+# Plot dei dati sulla popolazione
+ggplot(shp, aes(fill = log(population2022))) +      
+  # geom_sf() plots polygon data from an sf object (with black outlines)
+  geom_sf(col="black") +                   
+  # set a theme that is more visually appealing than the standard theme of ggplo2
+  theme_bw() +         
+  # set viridis color palette for filling, with some customization options
+  scale_fill_viridis_c(option="inferno", end=0.8) +     
+  # rename the legend title
+  labs(fill = "Log(Population 2022)")
 
 
 #################################################################################################
