@@ -215,8 +215,10 @@ full <- aggregate(full[, c("Protests", "Riots")], by=list(full$region), FUN = su
 shp <- left_join(shp, full, by=c("NUTS_NAME"="Group.1"))  ## join the total protest and riot counts to the original shapefile
 
 # Calcoliamo il numero di proteste e rivolte per 1,000 abitanti
+#####  MANCA VARIABILE population2022  ####
 shp$ppc <- 1000 * shp$Protests/shp$population2022  ## compute protests per 1000 capita
 shp$rpc <- 1000 * shp$Riots/shp$population2022  ## compute riots per 1000 capita
+
 ## CI SONO DEI GRAFICI CHE NON HO FATTO, MA POSSO VEDERE DIRETTAMENTE DAL FILE
 
 # Combiniamo ora i dati edlla popolazione, proteste/rivolte e SPEI-12
