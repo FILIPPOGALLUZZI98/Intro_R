@@ -45,6 +45,10 @@ plot.df <- as.data.frame(r[[488]], xy = TRUE)
 # Infine eliminamo i dati che mancano
 plot.df <- plot.df[complete.cases(plot.df), ] 
 
+# Dati ISTAT sulla popolazione italiana
+popdat = read.csv("italy_population_nuts3.csv")
+shp    = left_join(shp, popdat, by=c("NUTS_ID" = "nuts3_it"))
+
 
 #################################################################################################
 ####  PLOT  #####################################################################################
