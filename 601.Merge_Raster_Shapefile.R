@@ -214,6 +214,27 @@ full <- reshape2::dcast(full, year + month + region ~ type, value.var = "count")
 full <- aggregate(full[, c("Protests", "Riots")], by=list(full$region), FUN = sum)  ## compute sum of protests and riots per province between 2020-2022
 shp <- left_join(shp, full, by=c("NUTS_NAME"="Group.1"))  ## join the total protest and riot counts to the original shapefile
 
+# Calcoliamo il numero di proteste e rivolte per 1,000 abitanti
+shp$ppc <- 1000 * shp$Protests/shp$population2022  ## compute protests per 1000 capita
+shp$rpc <- 1000 * shp$Riots/shp$population2022  ## compute riots per 1000 capita
+## CI SONO DEI GRAFICI CHE NON HO FATTO, MA POSSO VEDERE DIRETTAMENTE DAL FILE
+
+# Combiniamo ora i dati edlla popolazione, proteste/rivolte e SPEI-12
+ggplot(shp, aes(rpc * 1000, 1000 * ppc, col=spei_2022_08)) +     
+  # draw the points
+  geom_point() +    
+  # nice theme
+  theme_bw() +    
+  # y axis label
+  ylab("Protests Per 1000 Inhabitants") +      
+  # x axis label
+  xlab("Riots Per 1000 Inhabitants") +        
+  # special command from "ggrepel" package: automatically labels the points based on "NUTS_NAME" variable in shp
+  geom_text_repel(aes(label = NUTS_NAME), max.overlaps=2) +        
+  # viridis color palette
+  scale_color_viridis_c(option="inferno", end=0.8) +          
+  # legend label
+  labs(col="SPEI-12\nin Aug. 2022")  
 
 
 
