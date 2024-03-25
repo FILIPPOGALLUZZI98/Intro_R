@@ -44,10 +44,6 @@ image(r[[1]])
 # sia leggibile da ggplot2. Per prima cosa diamo dei nomi a tutti i raster layer, basandoci sui
 # mesi e gli anni corrispondenti. Poi, costruiamo un data.frame dal raster data
 names(r) <- paste0(rep(paste0(1982:2022), each=12), "-", stringr::str_pad(rep(1:12, length(1982:2022)), 2, "left", "0"))
-# Questo crea un data.frame a partire dal layer numero 488 (agosto 2022)
-plot.df <- as.data.frame(r[[488]], xy = TRUE)
-# Infine eliminamo i dati che mancano
-plot.df <- plot.df[complete.cases(plot.df), ] 
 
 
 #################################################################################################
@@ -104,6 +100,10 @@ ggplot(shp, aes(fill=spei_2022_08)) +
 
 #################################################################################################
 ####  VISUALIZZARE SERIE TEMPORALI  #############################################################
+# Questo crea un data.frame a partire dal layer numero 488 (agosto 2022)
+plot.df <- as.data.frame(r[[488]], xy = TRUE)
+# Infine eliminamo i dati che mancano
+plot.df <- plot.df[complete.cases(plot.df), ] 
 # Portiamo i dati in un formato che sia consono per plottare con ggplot2, portando i dati da un formato
 # largo ad uno lungo
 plot.df <- reshape2::melt(spei_data, id.vars="region")
